@@ -1,4 +1,4 @@
-FROM php:7.2-fpm
+FROM php:7.2-fpm-alpine
      
 ENV PS1="\u@\h:\w\\$ "
      
@@ -46,7 +46,7 @@ COPY --chown=www:www . /var/www
 # Change current user to www
 USER www
 
-# Expose port 9001 and start php-fpm server
+# Expose port 9000 and start php-fpm server
 EXPOSE 9000
 CMD ["php-fpm"]
 
